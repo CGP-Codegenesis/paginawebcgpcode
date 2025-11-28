@@ -1,0 +1,187 @@
+/*
+    -----------------------------------------------------
+    CGP Code: Stylesheet Profesional
+    Diseño: Limpio, Minimalista, Responsivo y Centrado en Ingeniería.
+    Colores: Basados en la identidad de Python.
+    -----------------------------------------------------
+*/
+
+/* Variables y Resets */
+:root {
+    --color-primary: #3776ab;     /* Azul de Python (Claro) */
+    --color-secondary: #004d99;   /* Azul Oscuro (Header) */
+    --color-accent: #ffcc33;      /* Amarillo/Naranja de Python (Acento CTA) */
+    --color-text-dark: #333333;
+    --color-bg-light: #ffffff;    /* Fondo Blanco Puro */
+    --color-bg-grey: #f8f8f8;     /* Fondo de Sección Ligeramente Gris */
+    --font-heading: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-body: 'Arial', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: var(--color-bg-light); /* Fondo principal blanco */
+}
+
+/* Diseño General de Contenedores */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 50px;
+    padding: 40px;
+    background-color: var(--color-bg-light); 
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Sombra sutil para limpieza */
+}
+
+h2 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    font-size: 2em;
+    border-bottom: 3px solid var(--color-accent);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+/* Estilo del Header y Navegación */
+header {
+    background-color: var(--color-secondary); /* Azul Oscuro */
+    color: white;
+    padding: 30px 0 0;
+}
+
+.header-content {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-size: 3em;
+    margin: 0;
+    line-height: 1;
+}
+
+nav {
+    background-color: var(--color-primary); /* Azul de Python (Claro) */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--color-secondary);
+}
+
+/* Sección Hero (Destacado) */
+.hero-section {
+    text-align: center;
+    background: var(--color-bg-grey); /* Un fondo gris muy ligero para destacar */
+    padding: 80px 40px;
+    margin-top: 30px;
+    border: 1px solid #eee;
+}
+
+.hero-section h2 {
+    color: var(--color-secondary);
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.cta-button {
+    background-color: var(--color-accent); /* Acento Amarillo/Naranja */
+    color: var(--color-secondary);
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+    display: inline-block;
+    margin-top: 25px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #ffde59;
+    transform: translateY(-2px);
+}
+
+/* Grid de Servicios */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.card {
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: var(--color-bg-light);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+    color: var(--color-primary);
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--color-bg-grey);
+    padding-bottom: 5px;
+}
+
+
+/* Pie de Página */
+footer {
+    background-color: var(--color-text-dark);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9em;
+    margin-top: 50px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+    .hero-section h2 {
+        font-size: 2em;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li a {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
